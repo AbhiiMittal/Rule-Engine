@@ -1,0 +1,259 @@
+.rule-manager {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding: 1rem;
+  }
+  
+  .rule-manager-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  .tabs {
+    display: flex; /* Use flexbox to arrange buttons in a row */
+    justify-content: space-between; /* Evenly space buttons */
+    gap: 0.5rem;
+    width: 100%; /* Ensure the container takes full width */
+    flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+}
+
+.tabs button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: white; /* Set background to white */
+    color: black; /* Set text color to black */
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    flex: 1; /* Allow buttons to grow and fill the available space */
+    margin: 0; /* Remove default margin */
+}
+
+.tabs button:hover {
+    background-color: #f5f5f5; /* Slight background change on hover */
+}
+
+.tabs button.active {
+    background-color: white;
+    font-weight: bold;
+}
+
+  
+  .tab-content {
+    padding: 1.5rem;
+    background-color: white;
+    /* color: black; */
+    border: 1px solid #e5e5e5; /* Optional: Adds a border around content */
+    border-radius: 0.25rem;
+  }
+  
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: black; /* Black background by default */
+    color: white; /* White text by default */
+    border: none; /* No border by default */
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for background and border */
+  }
+  
+  .button:hover {
+    background-color: #333333; /* Lighter black background on hover */
+  }
+  
+  .button {
+    background-color: black;
+  }
+
+  .rule-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .rule-label {
+    flex-grow: 1;
+    margin-left: 10px; /* Spacing between checkbox and label */
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px; /* Add some space between buttons */
+  }
+  
+  .button {
+    padding: 5px 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and text */
+    transform: scale(1.2); /* Adjust checkbox size if needed */
+  }
+  
+  
+  .rules-list {
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .rule-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .rule-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rule-item label {
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .no-rules {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    border-radius: 0.5rem;
+    max-width: 64rem;
+    width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .modal-header button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-content {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .rule-details {
+    white-space: pre-wrap;
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.25rem;
+  }
+
+
+
+
+
+  .dialog {
+    width: 75%; /* Responsive width for larger screens */
+    margin: 5% auto; /* Centered vertically and horizontally */
+    padding: 1.5rem;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    background-color: white; /* Background for the dialog content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: relative;
+    transform: translateY(10%); /* Moves dialog down a little */
+  }
+  
+  .dialog-content {
+    max-height: 90vh; /* Occupy almost full height but keep it contained */
+    overflow: hidden; /* No scroll, all content should be visible */
+  }
+  
+  .dialog-content h2 {
+    font-size: 1.5rem; /* Adjust heading size to be appropriate */
+    margin-bottom: 1rem;
+  }
+  
+  .dialog-content .rule-content {
+    font-size: 1rem; /* Adjust body text size to be readable */
+    line-height: 1.5; /* Improve readability */
+    word-wrap: break-word; /* Handle long content gracefully */
+    white-space: pre-wrap; /* Ensures long text wraps onto the next line */
+    overflow-wrap: break-word; /* Break long words if necessary */
+    word-break: break-word; /* Handle breaking words at the edge */
+  }
+  
+  .dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed backdrop */
+  }
+  
+  .button {
+    background-color: #333; /* Dark button background */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #555; /* Slightly lighter color on hover */
+  }
+  
